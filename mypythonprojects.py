@@ -88,7 +88,7 @@ lst = ["rock", "paper", "scissors"]
 computer = random.choice(lst)
 print(computer)
 
-player = raw_input("enter your choise: ")
+player = input("enter your choise: ")
 
 if computer == player:
     print("it's tie: play again: ")
