@@ -83,31 +83,31 @@ print("thanks for playing game!!!")
 
 # rock, paper, scissors
 import random
+while True:
+      
+      random_choise = ["rock", "paper", "scissors"]
+      player = input("Hey player! Enter Your Choise: ")
+      computer = random.choice(random_choise)
+      print(f"You chose {player} and computer chose {computer}:")
 
-lst = ["rock", "paper", "scissors"]
-computer = random.choice(lst)
-print(computer)
-
-player = input("enter your choise: ")
-
-if computer == player:
-    print("it's tie: play again: ")
-elif computer == "rock":
-    if player == "paper":
-        print("you won! ")
-    else:
-        print("you lost!")
-elif computer == "paper":
-    if player == "scissors":
-        print("you won!")
-    else:
-        print("you lost!")
-elif computer == "scissors":
-    if player == "rock":
-        print("you won!")
-    else:
-        print("you lost!")
-
+      if computer == player:
+            print("It's Tie: Let's play again:")
+      elif computer == "rock":
+            if player == "paper":
+                  print("You Won! Because paper wraps the rock:")
+            else:
+                  print("You Lost! Because rock smashes the scissors:")
+      elif computer == "paper":
+            if player == "scissors":
+                  print("You Won! Because scissors cut the paper:")
+            else:
+                  print("You Lost! Because paper wraps the rock:")
+      elif computer == "scissors":
+            if player == "rock":
+                  print("You Won! Because rock smashes the scissors:")
+            else:
+                  print("You Lost! Because scissors cut the paper:")
+      print("")
 
 
 
