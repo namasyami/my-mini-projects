@@ -110,41 +110,43 @@ while True:
       print("")
 
 # Library Management System
+from time import  sleep
 book_list = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
-options=""" options are:
+options = """
+ === Welcome to our Library ===
+  options are:
     1. Show book list
     2. Borrow the book
     3. Return the book
     4. Exit the program
-    
      """
-    
 while True:
     print(options)
     opt =int(input("Select from the options: "))
     if opt==1:
         for book in book_list:
             print("=> " + book)
+            sleep(0.5)
+        print("")
             
     elif opt==2:
         book_borrowed = input("Enter book-name you want to borrow: ")
         print(f"You have borrowed the book named '{book_borrowed}'")
         book_list.remove(book_borrowed)
+        sleep(1)
+        print("")
         
     elif opt == 3:
         book_returned = input("Enter book-name you want to return: ")
+        print(f"You have returned the book named '{book_returned}'")
         book_list.append(book_returned)
+        sleep(1)
+        print("")
         
     elif opt == 4:
         break
 print("Thanks for using the our Library")
-       
-
-
-
-
-
-
+   
 
 
 
