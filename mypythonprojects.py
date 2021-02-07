@@ -109,7 +109,36 @@ while True:
                   print("You Lost! Because scissors cut the paper:")
       print("")
 
-
+# Library Management System
+book_list = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
+options=""" options are:
+    1. Show book list
+    2. Borrow the book
+    3. Return the book
+    4. Exit the program
+    
+     """
+    
+while True:
+    print(options)
+    opt =int(input("Select from the options: "))
+    if opt==1:
+        for book in book_list:
+            print("=> " + book)
+            
+    elif opt==2:
+        book_borrowed = input("Enter book-name you want to borrow: ")
+        print(f"You have borrowed the book named '{book_borrowed}'")
+        book_list.remove(book_borrowed)
+        
+    elif opt == 3:
+        book_returned = input("Enter book-name you want to return: ")
+        book_list.append(book_returned)
+        
+    elif opt == 4:
+        break
+print("Thanks for using the our Library")
+       
 
 
 
