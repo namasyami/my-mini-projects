@@ -241,7 +241,6 @@ print("Thanks for using the our Library")
 # Library Management System using "OOPs" with "constructor"
 from time import  sleep
 
-#lst = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
 class LibraryManagementSystem:
     """this is our Library class"""
     def __init__(self, bookList):
