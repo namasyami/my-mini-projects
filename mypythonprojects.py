@@ -189,7 +189,54 @@ while True:
     elif opt == 4:
         break
 print("Thanks for using the our Library")
-      
+    
+
+
+# Library Management System using OOPs
+from time import  sleep
+
+lst = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
+class LibraryManagementSystem:
+    def book_list(self):
+        """will list available  books"""
+        for i in lst:
+            print("=>" + i)
+            sleep(0.5)
+    def book_borrow(self):
+        """will list borrowed book"""
+        book_borrowed = input("Enter book-name you want to borrow: ")
+        print(f"You have borrowed the book named '{book_borrowed}'")
+        lst.remove(book_borrowed)
+        sleep(1)
+    def book_return(self):
+        """will list returned book"""
+        book_returned = input("Enter book-name you want to return: ")
+        print(f"You have returned the book named '{book_returned}'")
+        lst.append(book_returned)
+        sleep(1)
+options = """
+ === Welcome to our Library ===
+  options are:
+    1. Show book list
+    2. Borrow the book
+    3. Return the book
+    4. Exit the program
+    """
+LMS = LibraryManagementSystem()
+while True:
+    print(options)
+    opt =int(input("Select from the options: "))
+    
+    if opt==1:
+        LMS.book_list()
+    elif opt==2:
+        LMS.book_borrow()
+    elif opt == 3:
+        LMS.book_return()
+    elif opt == 4:
+        break
+print("Thanks for using the our Library")
+
       
    
 
