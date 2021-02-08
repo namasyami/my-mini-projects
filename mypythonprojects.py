@@ -109,7 +109,7 @@ while True:
                   print("You Lost! Because scissors cut the paper:")
       print("")
 
-# Library Management System
+# Library Management System using "if, else" and "Loops"
 from time import  sleep
 book_list = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
 options = """
@@ -147,7 +147,7 @@ while True:
         break
 print("Thanks for using the our Library")
 
-# Library Management System using functions
+# Library Management System using "functions"
 from time import  sleep
 
 lst = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
@@ -192,7 +192,7 @@ print("Thanks for using the our Library")
     
 
 
-# Library Management System using OOPs
+# Library Management System using "OOPs" without "constructor"
 from time import  sleep
 
 lst = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
@@ -236,6 +236,57 @@ while True:
     elif opt == 4:
         break
 print("Thanks for using the our Library")
+
+
+# Library Management System using "OOPs" with "constructor"
+from time import  sleep
+
+#lst = ["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"]
+class LibraryManagementSystem:
+    """this is our Library class"""
+    def __init__(self, bookList):
+        self.bookList = bookList
+    def book_list(self):
+        """will list available  books"""
+        for i in self.bookList:
+            print("=>" + i)
+            sleep(0.5)
+    def book_borrow(self):
+        """will list borrowed book"""
+        book_borrowed = input("Enter book-name you want to borrow: ")
+        print(f"You have borrowed the book named '{book_borrowed}'")
+        self.bookList.remove(book_borrowed)
+        sleep(1)
+    def book_return(self):
+        """will list returned book"""
+        book_returned = input("Enter book-name you want to return: ")
+        print(f"You have returned the book named '{book_returned}'")
+        self.bookList.append(book_returned)
+        sleep(1)
+options = """
+ === Welcome to our Library ===
+  options are:
+    1. Show book list
+    2. Borrow the book
+    3. Return the book
+    4. Exit the program
+    """
+LMS = LibraryManagementSystem(["Geeta", "Ramayan", "Mahabharat", "Darshan", "Vedas", "Vyakaran"])
+while True:
+    print(options)
+    opt =int(input("Select from the options: "))
+    
+    if opt==1:
+        LMS.book_list()
+    elif opt==2:
+        LMS.book_borrow()
+    elif opt == 3:
+        LMS.book_return()
+    elif opt == 4:
+        break
+print("Thanks for using the our Library")
+      
+
 
       
    
