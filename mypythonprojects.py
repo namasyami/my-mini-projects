@@ -284,7 +284,99 @@ while True:
     elif opt == 4:
         break
 print("Thanks for using the our Library")
-      
+
+# Tic-Tac-Toe game with little bug when player2 selects place
+import random
+from time import sleep
+dic = {
+    "1":" ","2":" ","3":" ",
+    "4":" ","5":" ","6":" ",
+    "7":" ","8":" ","9":" ",
+    }
+
+def Board():
+    print(dic["1"] + "|" + dic["2"] + "|" + dic["3"] )
+    print("-+-+-")
+    print(dic["4"] + "|" + dic["5"] + "|" + dic["6"] )
+    print("-+-+-")
+    print(dic["7"] + "|" + dic["8"] + "|" + dic["9"] )
+Board()
+def PlayGame():
+    for i in dic:
+        player1 = input("\nHey player1! Enter value: ")
+        if dic[player1] == " ":
+            dic[player1] = "x"
+            Board()
+        else:
+            print("Already Selected!! Chose Another Place:")
+            continue
+        if dic["1"] == dic["2"] == dic["3"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+        elif dic["4"] == dic["5"] == dic["6"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+        elif dic["7"] == dic["8"] == dic["9"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+        elif dic["1"] == dic["4"] == dic["7"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+        elif dic["2"] == dic["5"] == dic["8"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+        elif dic["3"] == dic["6"] == dic["9"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+        elif dic["1"] == dic["5"] == dic["9"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+        elif dic["3"] == dic["5"] == dic["7"]  == "x":
+            print("Congratulations!!! player1 wins........")
+            break
+
+    
+        computer = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        print("\nNow it's turn of player2: ")
+        sleep(1)
+        player2 = random.choice(computer)
+        print(f"player2 selected place: {player2}")
+        if dic[player2] == " ":
+            dic[player2] = "o"
+            
+        else:
+            print("Already Selected!! Chose Another Place:")
+            player2 = random.choice(computer)
+            print(f"player2 selected place: {player2}")
+            if dic[player2] == " ":
+                dic[player2] = "o"
+        Board()      
+        
+        if dic["1"] == dic["2"] == dic["3"]  == "o":
+            print("player2 wins..... Sorry you Lost....Good Luck Ahead")
+            break
+        elif dic["4"] == dic["5"] == dic["6"]  == "o":
+            print("player2 wins..... Sorry you Lost....Good Luck Ahead")
+            break
+        elif dic["7"] == dic["8"] == dic["9"]  == "o":
+            print("player2 wins..... Sorry you Lost....Good Luck Ahead")
+            break
+        elif dic["1"] == dic["4"] == dic["7"]  == "o":
+            print("player2 wins..... Sorry you Lost....Good Luck Ahead")
+            break
+        elif dic["2"] == dic["5"] == dic["8"]  == "o":
+            print("player2 wins..... Sorry you Lost....Good Luck Ahead")
+            break
+        elif dic["3"] == dic["6"] == dic["9"]  == "o":
+            print("player2 wins..... Sorry you Lost....Good Luck Ahead")
+            break
+        elif dic["1"] == dic["5"] == dic["9"]  == "o":
+            print("player2 wins..... Sorry you Lost....Good Luck Ahead")
+            break
+        elif dic["3"] == dic["5"] == dic["7"]  == "o":
+            print("player2 wins..... Sorry You Lost....Good Luck Ahead")
+            break
+PlayGame()
 
 
       
