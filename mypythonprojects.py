@@ -301,7 +301,7 @@ def Board():
     print("-+-+-")
     print(dic["7"] + "|" + dic["8"] + "|" + dic["9"] )
 Board()
-def PlayGame():
+def PlayTicTacToe():
     for i in dic:
         player1 = input("\nHey player1! Enter value: ")
         if dic[player1] == " ":
@@ -376,7 +376,7 @@ def PlayGame():
         elif dic["3"] == dic["5"] == dic["7"]  == "o":
             print("player2 wins..... Sorry You Lost....Good Luck Ahead")
             break
-PlayGame()
+PlayTicTacToe()
 
 
       
