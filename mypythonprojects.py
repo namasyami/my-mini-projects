@@ -379,7 +379,36 @@ def PlayTicTacToe():
 PlayTicTacToe()
 
 
-      
+
+# hang man
+import random
+word_list = ["homoeopathy", "python", "django", "gowithwind"]
+secret_word = random.choice(word_list)
+empty_str = ""
+turns = 3
+while turns>0:
+    wrong_alphabet = 0
+    for i in secret_word:
+        if i in empty_str:
+            print(i)
+        else:
+            print("_")
+            wrong_alphabet +=1
+    if wrong_alphabet == 0:
+        print("you won!!!!")
+        print("the right word was {}".format(secret_word))
+        break
+    
+    alphabet = raw_input("enter guess: ")
+    empty_str += alphabet
+
+    if alphabet not in secret_word:
+        turns -=1
+        print("wrong guess")
+        print("remaining turns are: {} ".format(turns))
+        if turns == 0:
+            print("you lost! right word was: " + secret_word)
+
    
 
 
